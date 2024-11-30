@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>З НОВИМ РОКОМ!</title>
+  <link rel="stylesheet" href="style/main.css">
+</head>
+<body>
+    <h1>З Новим Роком!</h1>
+    <p>Нехай 2024 рік принесе багато радості, здоров'я, щастя та нових досягнень!</p>
+
+    <!-- Зображення в центрі -->
+    <div class="image-container">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTO4kMC_Jl5z333QZbUDLCn-UrNiDCSJTPLNQ&s" alt="Новорічне зображення">
+    </div>
+
+    <p>Щиро вітаємо Вас із святами!</p>
+
+    <!-- Унікальний "подарунок року" -->
+    <div class="gift-box" onclick="openGift()">🎁</div>
+    <p class="gift" id="gift">Натисніть на подарунок, щоб дізнатися, що ви отримаєте на Новий рік!</p>
+
+    <!-- Анімація снігу -->
+    <div id="snowflakes"></div>
+
+    <footer>З найкращими побажаннями, Ваша новорічна листівка.</footer>
+
+    <script>
+        // Генеруємо сніжинки
+        const snowflakesContainer = document.getElementById('snowflakes');
+        for (let i = 0; i < 50; i++) {
+            const snowflake = document.createElement('div');
+            snowflake.textContent = '❄';
+            snowflake.classList.add('snowflake');
+            snowflake.style.left = Math.random() * 100 + 'vw';
+            snowflake.style.animationDuration = Math.random() * 3 + 2 + 's';
+            snowflake.style.fontSize = Math.random() * 1.5 + 0.5 + 'em';
+            snowflakesContainer.appendChild(snowflake);
+        }
+
+        // Список подарунків
+        const gifts = [
+            "Новий ноутбук!",
+            "Подорож до мрії!",
+            "Великий оберемок щастя!",
+            "Новий смартфон!",
+            "Справжнє кохання!",
+            "Купу грошей і удачу!",
+            "Здоров'я для всієї родини!",
+            "Натхнення для нових звершень!"
+        ];
+
+        function openGift() {
+            const giftElement = document.getElementById('gift');
+            const randomGift = gifts[Math.floor(Math.random() * gifts.length)];
+            giftElement.textContent = "Ваш подарунок: " + randomGift;
+        }
+    </script>
+</body>
+</html>
