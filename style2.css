@@ -1,0 +1,80 @@
+/* Загальні стилі */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+    transition: background-color 0.3s ease; /* Плавний перехід для фону */
+}
+
+/* Навігаційне посилання */
+li {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+li a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: #007bff;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 12px 24px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Легка тінь */
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block; /* Щоб padding працював правильно */
+}
+
+li a:hover {
+    background-color: #007bff;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тінь при наведенні */
+}
+
+/* Заголовки */
+h1 {
+    font-size: 2rem;
+    color: #2c3e50;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 8px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+/* Текст і посилання */
+p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+p a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+p a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Адаптивність (базова) */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    li a {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
